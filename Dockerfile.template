@@ -1,0 +1,10 @@
+FROM resin/%%RESIN_MACHINE_NAME%%-python
+
+RUN apt-get update && apt-get install -y python-smbus
+RUN pip install scrollphat
+RUN pip install requests
+
+COPY app/app.py /app.py
+
+CMD [ "python", "app.py" ]
+
