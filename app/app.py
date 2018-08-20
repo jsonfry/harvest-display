@@ -28,7 +28,7 @@ def get_hours():
         total += entry['hours']
 
 
-    return '{0:.1f}'.format(total).replace('.', '')
+    return '{0:04.1f}'.format(total).replace('.', '')
 
 scrollphat.set_brightness(200)
 while True:
